@@ -74,7 +74,7 @@ const selected=()=>{
         });
 
         const data = await response.json();
-        console.log(data);
+        // console.log(data);+
         setForm({ ...form, photo:data.photo});
       } catch (err) {
         alert(err);

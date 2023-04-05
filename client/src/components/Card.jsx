@@ -1,9 +1,11 @@
 import React from 'react'
 import {download} from '../assets';
 import { downloadImage } from '../utils';
+import {FaWhatsapp} from 'react-icons/fa';
+
 const Card = ({_id,name,prompt,photo}) => {
   return (
-    <div className='rounded-xl group relative shadow-card hover:shadow-cardhover card'>
+    <div className='rounded-xl group relative shadow-card hover:shadow-cardhover card flex justify-center'>
       <img src={photo} alt={prompt} />
     <div className="group-hover:flex flex-col max-h-[90%] hidden absolute bottom-0 left-0 right-0 bg-[#10131f] m-2 p-4 rounded-md">
     <p className='text-white text-sm overflow-y-auto prompt'>{prompt}</p>
@@ -14,10 +16,13 @@ const Card = ({_id,name,prompt,photo}) => {
       </div>
     <p className="text-white text-sm">{name}</p>
     </div>
+   
     <button type='button' onClick={()=> downloadImage(_id,photo)} className='outline-none bg-transparent border-none'>
-      <img src={download} alt="download" className='w-6 h-6 object-contain invert'/>
+      <img src={download} alt="download" className='w-6 h-6 object-contain invert '/>
     </button>
-
+    {/* <button type='button'
+    ><FaWhatsapp className='w-7 h-7 bg-green-800 rounded-lg' onClick={'https://www.youtube.com/watch?v=Vi0rhGWLcJY'}/>
+   </button> */}
 
   </div>
 
