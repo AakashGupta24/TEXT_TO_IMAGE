@@ -1,6 +1,6 @@
 import React from 'react'
-
-const FormField = ({labelName,type,name,placeholder,value,handleChange,isSurpriseMe,handleSurpriseMe}) => {
+import { FaMicrophone } from 'react-icons/fa'
+const FormField = ({labelName,type,name,placeholder,value,handleChange,isSurpriseMe,handleSurpriseMe,microphone,generateText}) => {
   return (
     <div>
         <div className="flex items-center gap-2 mb-2">
@@ -16,7 +16,13 @@ const FormField = ({labelName,type,name,placeholder,value,handleChange,isSurpris
                 Surprise me
             </button>
           )}
-          
+          {
+            microphone && (
+              <button type='button' onClick={generateText}>
+              <FaMicrophone className='w-10 h-6 text-purple-900' />
+              </button>
+            )
+          }
         </div>
             <input
             type={type}
@@ -26,8 +32,9 @@ const FormField = ({labelName,type,name,placeholder,value,handleChange,isSurpris
             value={value}
             onChange={handleChange}
             required
+            
             className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring=[#4649ff] focus:border-[#4649ff] outline-none block w-full p-3'
-/>
+/> 
     </div>
   )
 }
