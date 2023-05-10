@@ -5,7 +5,6 @@ import { preview } from '../assets';
 import { getRandomPrompt } from '../utils';
 import { FormField, Loader } from '../components';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
-import {FaMicrophone} from 'react-icons/fa'
 
 
 const CreatePost = () => {

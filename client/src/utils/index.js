@@ -8,11 +8,7 @@ export function getRandomPrompt(prompt){
 }
 
 export async function downloadImage(_id,photo){
-    // {
-    //     photo.endswidth('gif')? 
-    //     Filesaver.saveAs(photo,`download-${_id}.gif`):
-    //     Filesaver.saveAs(photo,`download-${_id}.jpg`);
-    // }
+  
     let getType = String(photo)
     if (getType.endsWith('gif')) {
         Filesaver.saveAs(photo,`download-${_id}.gif`);
